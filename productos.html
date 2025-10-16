@@ -1,138 +1,349 @@
-<!-- 
-Plantilla desarrollada por Áurea Web  
-Todos los derechos reservados © 2025  
-Sitio web oficial: https://aurea-web.com  
-Esta plantilla está bajo el control de la agencia de desarrollo web Áurea Web. 
--->
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Catálogo de productos Dcasa - Muebles de madera artesanal, cortinas personalizadas y decoración para el hogar">
-        <meta name="keywords" content="catálogo, productos, muebles, madera, cortinas, decoración, hogar">
-        <title>Catálogo de Productos - Dcasa</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <!-- Header -->
-        <header class="header" role="banner">
-            <div class="container">
-                <div class="logo">
-                    <h1><a href="index.html" aria-label="Dcasa - Inicio">Dcasa</a></h1>
-                </div>
-                <nav class="nav" role="navigation" aria-label="Navegación principal">
-                    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                    <ul class="nav-menu">
-                        <li><a href="index.html">Inicio</a></li>
-                        <li><a href="productos.html" class="active">Productos</a></li>
-                        <li><a href="index.html#contacto">Contacto</a></li>
-                    </ul>
-                </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Catálogo completo de productos Dcasa: muebles en madera, cortinas personalizadas, lámparas decorativas y accesorios para el hogar. Diseño y calidad artesanal.">
+    <meta name="keywords" content="catálogo decoración, muebles madera, cortinas, lámparas, accesorios hogar, productos decorativos">
+    <meta name="author" content="Áurea Web - https://aurea-web.com">
+    <title>Catálogo de Productos - Dcasa | Decoración de Interiores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <nav class="nav-container" role="navigation" aria-label="Navegación principal">
+            <div class="logo" aria-label="Dcasa - Inicio">
+                <a href="index.html" class="logo-text">Dcasa</a>
             </div>
-        </header>
+            <button class="menu-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Inicio</a></li>
+                <li><a href="index.html#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="index.html#galeria" class="nav-link">Galería</a></li>
+                <li><a href="index.html#destacados" class="nav-link">Destacados</a></li>
+                <li><a href="productos.html" class="nav-link active">Productos</a></li>
+                <li><a href="index.html#testimonios" class="nav-link">Testimonios</a></li>
+                <li><a href="index.html#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Hero Catálogo -->
-        <section class="hero-catalogo" role="region" aria-labelledby="catalogo-heading">
+    <main role="main">
+        <!-- Page Header -->
+        <section class="page-header" role="region" aria-label="Encabezado de página">
             <div class="container">
-                <h1 id="catalogo-heading" class="fade-in">Nuestro Catálogo</h1>
-                <p class="fade-in-delay">Descubre nuestra colección de piezas únicas, creadas con amor y dedicación</p>
+                <h1 class="page-title">Nuestros Productos</h1>
+                <p class="page-subtitle">Explora nuestra colección de muebles, textiles y accesorios diseñados para transformar tu hogar</p>
             </div>
         </section>
 
-        <!-- Filtros -->
-        <section class="filtros" role="search" aria-labelledby="filtros-heading">
+        <!-- Filtros de Categorías -->
+        <section class="filters-section" role="region" aria-label="Filtros de productos">
             <div class="container">
-                <h2 id="filtros-heading" class="sr-only">Filtrar productos</h2>
-                <div class="filtros-content">
-                    <button class="filtro-btn active" data-categoria="todos">Todos los productos</button>
-                    <button class="filtro-btn" data-categoria="muebles">Muebles</button>
-                    <button class="filtro-btn" data-categoria="cortinas">Cortinas</button>
-                    <button class="filtro-btn" data-categoria="iluminacion">Iluminación</button>
-                    <button class="filtro-btn" data-categoria="decoracion">Decoración</button>
+                <div class="filters">
+                    <button class="filter-btn active" data-category="todos" aria-pressed="true">Todos</button>
+                    <button class="filter-btn" data-category="muebles" aria-pressed="false">Muebles</button>
+                    <button class="filter-btn" data-category="cortinas" aria-pressed="false">Cortinas</button>
+                    <button class="filter-btn" data-category="lamparas" aria-pressed="false">Lámparas</button>
+                    <button class="filter-btn" data-category="accesorios" aria-pressed="false">Accesorios</button>
                 </div>
             </div>
         </section>
 
         <!-- Catálogo de Productos -->
-        <section class="section catalogo" role="region" aria-labelledby="productos-heading">
+        <section class="catalog-section" role="region" aria-labelledby="catalog-title">
             <div class="container">
-                <h2 id="productos-heading" class="sr-only">Lista de productos</h2>
-                <div class="productos-grid" id="productos-container">
-                    <!-- Los productos se cargan dinámicamente con JavaScript -->
+                <div class="products-catalog" id="productsCatalog">
+                    <!-- Muebles -->
+                    <article class="product-card-large" data-category="muebles" data-product="sofa-nordic">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=700&h=700&fit=crop" alt="Sofá nórdico premium en tonos beige">
+                            <div class="product-badge">Destacado</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Sofá Nórdico Premium</h3>
+                            <p class="product-category">Muebles</p>
+                            <p class="product-excerpt">Diseño escandinavo con tapizado de alta calidad</p>
+                            <button class="btn-details" aria-label="Ver detalles del sofá nórdico">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="muebles" data-product="mesa-oak">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=700&h=700&fit=crop" alt="Mesa de centro en madera de roble">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Mesa Centro Oak</h3>
+                            <p class="product-category">Muebles</p>
+                            <p class="product-excerpt">Madera de roble maciza con acabado natural</p>
+                            <button class="btn-details" aria-label="Ver detalles de mesa de centro">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="muebles" data-product="estanteria-minimal">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1594620302200-9a762244a156?w=700&h=700&fit=crop" alt="Estantería minimalista de madera">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Estantería Minimal</h3>
+                            <p class="product-category">Muebles</p>
+                            <p class="product-excerpt">Líneas limpias y funcionalidad perfecta</p>
+                            <button class="btn-details" aria-label="Ver detalles de estantería">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="muebles" data-product="sillon-reading">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=700&h=700&fit=crop" alt="Sillón de lectura confortable">
+                            <div class="product-badge">Nuevo</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Sillón Reading</h3>
+                            <p class="product-category">Muebles</p>
+                            <p class="product-excerpt">Confort máximo para tus momentos de descanso</p>
+                            <button class="btn-details" aria-label="Ver detalles del sillón">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <!-- Cortinas -->
+                    <article class="product-card-large" data-category="cortinas" data-product="cortinas-lino">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&h=700&fit=crop" alt="Cortinas de lino natural">
+                            <div class="product-badge">Destacado</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Cortinas Lino Natural</h3>
+                            <p class="product-category">Cortinas</p>
+                            <p class="product-excerpt">Textiles premium hechos a medida</p>
+                            <button class="btn-details" aria-label="Ver detalles de cortinas de lino">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="cortinas" data-product="cortinas-blackout">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1616047006789-b7af5afb8c20?w=700&h=700&fit=crop" alt="Cortinas blackout elegantes">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Cortinas Blackout Elegance</h3>
+                            <p class="product-category">Cortinas</p>
+                            <p class="product-excerpt">Bloqueo total de luz con estilo sofisticado</p>
+                            <button class="btn-details" aria-label="Ver detalles de cortinas blackout">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="cortinas" data-product="roller-bamboo">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1604709177225-055f99402ea3?w=700&h=700&fit=crop" alt="Cortinas roller de bambú">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Roller Bambú Natural</h3>
+                            <p class="product-category">Cortinas</p>
+                            <p class="product-excerpt">Estilo natural y control de luz perfecto</p>
+                            <button class="btn-details" aria-label="Ver detalles de roller de bambú">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <!-- Lámparas -->
+                    <article class="product-card-large" data-category="lamparas" data-product="lampara-geometric">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=700&h=700&fit=crop" alt="Lámpara colgante geométrica">
+                            <div class="product-badge">Destacado</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Lámpara Geometric</h3>
+                            <p class="product-category">Lámparas</p>
+                            <p class="product-excerpt">Diseño moderno con formas geométricas</p>
+                            <button class="btn-details" aria-label="Ver detalles de lámpara geométrica">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="lamparas" data-product="lampara-wood">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=700&h=700&fit=crop" alt="Lámpara de pie en madera">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Lámpara Wood Standing</h3>
+                            <p class="product-category">Lámparas</p>
+                            <p class="product-excerpt">Elegancia en madera con luz cálida</p>
+                            <button class="btn-details" aria-label="Ver detalles de lámpara de madera">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="lamparas" data-product="lampara-pendant">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1543198126-a8ad8a47ab0e?w=700&h=700&fit=crop" alt="Lámpara colgante minimalista">
+                            <div class="product-badge">Nuevo</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Pendant Minimal</h3>
+                            <p class="product-category">Lámparas</p>
+                            <p class="product-excerpt">Simplicidad que ilumina con estilo</p>
+                            <button class="btn-details" aria-label="Ver detalles de lámpara colgante">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="lamparas" data-product="lampara-table">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1550360584-3fbb4de4e3df?w=700&h=700&fit=crop" alt="Lámpara de mesa decorativa">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Lámpara Table Decor</h3>
+                            <p class="product-category">Lámparas</p>
+                            <p class="product-excerpt">Luz ambiental perfecta para cualquier rincón</p>
+                            <button class="btn-details" aria-label="Ver detalles de lámpara de mesa">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <!-- Accesorios -->
+                    <article class="product-card-large" data-category="accesorios" data-product="espejo-circular">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?w=700&h=700&fit=crop" alt="Espejo circular con marco de madera">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Espejo Circular Wood</h3>
+                            <p class="product-category">Accesorios</p>
+                            <p class="product-excerpt">Marco artesanal en madera natural</p>
+                            <button class="btn-details" aria-label="Ver detalles del espejo circular">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="accesorios" data-product="jarrones-ceramic">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1578749556568-bc2c40e68b61?w=700&h=700&fit=crop" alt="Set de jarrones cerámicos">
+                            <div class="product-badge">Destacado</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Set Jarrones Ceramic</h3>
+                            <p class="product-category">Accesorios</p>
+                            <p class="product-excerpt">Cerámica artesanal en tonos neutros</p>
+                            <button class="btn-details" aria-label="Ver detalles del set de jarrones">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="accesorios" data-product="cuadros-abstract">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?w=700&h=700&fit=crop" alt="Cuadros abstractos modernos">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Cuadros Abstract Art</h3>
+                            <p class="product-category">Accesorios</p>
+                            <p class="product-excerpt">Arte contemporáneo para tus paredes</p>
+                            <button class="btn-details" aria-label="Ver detalles de cuadros abstractos">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="accesorios" data-product="cojines-texture">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=700&h=700&fit=crop" alt="Cojines decorativos con texturas">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Cojines Texture Mix</h3>
+                            <p class="product-category">Accesorios</p>
+                            <p class="product-excerpt">Texturas variadas y colores armónicos</p>
+                            <button class="btn-details" aria-label="Ver detalles de cojines">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="accesorios" data-product="reloj-wall">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1563861826100-9cb868fdbe1c?w=700&h=700&fit=crop" alt="Reloj de pared minimalista">
+                            <div class="product-badge">Nuevo</div>
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Reloj Wall Minimal</h3>
+                            <p class="product-category">Accesorios</p>
+                            <p class="product-excerpt">Diseño atemporal y funcional</p>
+                            <button class="btn-details" aria-label="Ver detalles del reloj de pared">Ver Detalles</button>
+                        </div>
+                    </article>
+
+                    <article class="product-card-large" data-category="accesorios" data-product="alfombra-natural">
+                        <div class="product-image-large">
+                            <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=700&h=700&fit=crop" alt="Alfombra de fibras naturales">
+                        </div>
+                        <div class="product-info-large">
+                            <h3>Alfombra Natural Fiber</h3>
+                            <p class="product-category">Accesorios</p>
+                            <p class="product-excerpt">Fibras naturales tejidas a mano</p>
+                            <button class="btn-details" aria-label="Ver detalles de alfombra">Ver Detalles</button>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
+    </main>
 
-        <!-- Modal de Producto -->
-        <div id="producto-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
-            <div class="modal-content">
-                <button class="modal-close" aria-label="Cerrar modal">&times;</button>
-                <div class="modal-body">
-                    <div class="modal-image">
-                        <div class="image-placeholder"></div>
+    <!-- Modal de Producto -->
+    <div class="modal" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p class="modal-category" id="modalCategory"></p>
+                    <div class="modal-description" id="modalDescription"></div>
+                    <div class="modal-details">
+                        <h3>Especificaciones</h3>
+                        <ul id="modalSpecs"></ul>
                     </div>
-                    <div class="modal-info">
-                        <h2 id="modal-title">Nombre del Producto</h2>
-                        <p class="modal-desc">Descripción detallada del producto</p>
-                        <div class="modal-details">
-                            <div class="detail-item">
-                                <h3>Materiales</h3>
-                                <p id="modal-materiales">Madera de roble, acabado natural</p>
-                            </div>
-                            <div class="detail-item">
-                                <h3>Dimensiones</h3>
-                                <p id="modal-dimensiones">120 x 60 x 45 cm</p>
-                            </div>
-                            <div class="detail-item">
-                                <h3>Precio</h3>
-                                <p id="modal-precio" class="precio">$0</p>
-                            </div>
-                        </div>
-                        <button class="btn btn-primary">Consultar disponibilidad</button>
+                    <div class="modal-actions">
+                        <a href="index.html#contacto" class="cta-button">Solicitar Información</a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!-- Footer -->
-        <footer class="footer" role="contentinfo">
-            <div class="container">
-                <div class="footer-content">
-                    <div class="footer-section">
-                        <h3>Dcasa</h3>
-                        <p>Decoración de interiores, accesorios en madera artesanal, cortinas personalizadas y detalles decorativos para el hogar.</p>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Enlaces</h3>
-                        <ul>
-                            <li><a href="index.html">Inicio</a></li>
-                            <li><a href="productos.html">Productos</a></li>
-                            <li><a href="index.html#contacto">Contacto</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-section">
-                        <h3>Redes Sociales</h3>
-                        <div class="social-links">
-                            <a href="#" aria-label="Instagram">Instagram</a>
-                            <a href="#" aria-label="Facebook">Facebook</a>
-                            <a href="#" aria-label="Pinterest">Pinterest</a>
-                        </div>
-                    </div>
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Dcasa</h3>
+                    <p>Transformando espacios, creando hogares. Especialistas en decoración artesanal y diseños personalizados desde 2015.</p>
                 </div>
-                <div class="footer-bottom">
-                    <p>Plantilla desarrollada por Áurea Web © 2025 — <a href="https://aurea-web.com" target="_blank">Visitar sitio oficial</a></p>
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="index.html#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="productos.html">Productos</a></li>
+                        <li><a href="index.html#galeria">Galería</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="Pinterest">📌</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
                 </div>
             </div>
-        </footer>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Dcasa. Todos los derechos reservados.</p>
+                <p>Plantilla desarrollada por <a href="https://aurea-web.com" target="_blank" rel="noopener noreferrer">Áurea Web</a></p>
+            </div>
+        </div>
+    </footer>
 
-        <script src="script.js"></script>
-    </body>
+    <script src="script.js"></script>
+</body>
 </html>
+
+<!--
+Licencia:
+Copyright © 2025 Áurea Web (https://aurea-web.com)
+Todos los derechos reservados. Este código y diseño son propiedad exclusiva de Áurea Web.
+Prohibida su reproducción, distribución o uso sin autorización expresa.
+-->
