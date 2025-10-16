@@ -1,0 +1,138 @@
+<!-- 
+Plantilla desarrollada por Áurea Web  
+Todos los derechos reservados © 2025  
+Sitio web oficial: https://aurea-web.com  
+Esta plantilla está bajo el control de la agencia de desarrollo web Áurea Web. 
+-->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Catálogo de productos Dcasa - Muebles de madera artesanal, cortinas personalizadas y decoración para el hogar">
+        <meta name="keywords" content="catálogo, productos, muebles, madera, cortinas, decoración, hogar">
+        <title>Catálogo de Productos - Dcasa</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="logo">
+                    <h1><a href="index.html" aria-label="Dcasa - Inicio">Dcasa</a></h1>
+                </div>
+                <nav class="nav" role="navigation" aria-label="Navegación principal">
+                    <button class="nav-toggle" aria-expanded="false" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="productos.html" class="active">Productos</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Catálogo -->
+        <section class="hero-catalogo" role="region" aria-labelledby="catalogo-heading">
+            <div class="container">
+                <h1 id="catalogo-heading" class="fade-in">Nuestro Catálogo</h1>
+                <p class="fade-in-delay">Descubre nuestra colección de piezas únicas, creadas con amor y dedicación</p>
+            </div>
+        </section>
+
+        <!-- Filtros -->
+        <section class="filtros" role="search" aria-labelledby="filtros-heading">
+            <div class="container">
+                <h2 id="filtros-heading" class="sr-only">Filtrar productos</h2>
+                <div class="filtros-content">
+                    <button class="filtro-btn active" data-categoria="todos">Todos los productos</button>
+                    <button class="filtro-btn" data-categoria="muebles">Muebles</button>
+                    <button class="filtro-btn" data-categoria="cortinas">Cortinas</button>
+                    <button class="filtro-btn" data-categoria="iluminacion">Iluminación</button>
+                    <button class="filtro-btn" data-categoria="decoracion">Decoración</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Catálogo de Productos -->
+        <section class="section catalogo" role="region" aria-labelledby="productos-heading">
+            <div class="container">
+                <h2 id="productos-heading" class="sr-only">Lista de productos</h2>
+                <div class="productos-grid" id="productos-container">
+                    <!-- Los productos se cargan dinámicamente con JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal de Producto -->
+        <div id="producto-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+            <div class="modal-content">
+                <button class="modal-close" aria-label="Cerrar modal">&times;</button>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                    <div class="modal-info">
+                        <h2 id="modal-title">Nombre del Producto</h2>
+                        <p class="modal-desc">Descripción detallada del producto</p>
+                        <div class="modal-details">
+                            <div class="detail-item">
+                                <h3>Materiales</h3>
+                                <p id="modal-materiales">Madera de roble, acabado natural</p>
+                            </div>
+                            <div class="detail-item">
+                                <h3>Dimensiones</h3>
+                                <p id="modal-dimensiones">120 x 60 x 45 cm</p>
+                            </div>
+                            <div class="detail-item">
+                                <h3>Precio</h3>
+                                <p id="modal-precio" class="precio">$0</p>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary">Consultar disponibilidad</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>Dcasa</h3>
+                        <p>Decoración de interiores, accesorios en madera artesanal, cortinas personalizadas y detalles decorativos para el hogar.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Enlaces</h3>
+                        <ul>
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="productos.html">Productos</a></li>
+                            <li><a href="index.html#contacto">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Redes Sociales</h3>
+                        <div class="social-links">
+                            <a href="#" aria-label="Instagram">Instagram</a>
+                            <a href="#" aria-label="Facebook">Facebook</a>
+                            <a href="#" aria-label="Pinterest">Pinterest</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>Plantilla desarrollada por Áurea Web © 2025 — <a href="https://aurea-web.com" target="_blank">Visitar sitio oficial</a></p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
